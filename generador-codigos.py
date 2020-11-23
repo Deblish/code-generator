@@ -2,9 +2,11 @@ import functions
 
 f = open("ref.txt", "r")
 refcodes = f.read().split('\n')
-print()
-functions.bubbleSort(refcodes)
+refcodes.sort()
 generados = functions.genera(refcodes)
-print ("Codigos Generados son:") 
-for i in range(len(generados)): 
-    print ("%s\n" %generados[i]),
+f2 = open("generados.txt", "w")
+for i in generados: 
+	f2.write("%s\n" %i)
+    #print ("%s\n" %i),
+f2.close()
+f.close()
