@@ -3,6 +3,8 @@ import tkinter as tk
 import functions
 
 window = tk.Tk()
+window.title('Code generator')
+
 var1 = tk.StringVar()
 var1.set(functions.get_codigo())
 
