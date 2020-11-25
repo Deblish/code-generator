@@ -5,7 +5,7 @@ refcodes = f.read().split('\n')
 f.close()
 refcodes.sort()
 generados = functions.genera(refcodes)
-f = open("generados.txt", "w")
+f = open("generados2.txt", "w")
 for i in generados: 
 	f.write("%s\n" %i)
     #print ("%s\n" %i),

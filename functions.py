@@ -6,7 +6,7 @@ def genera(list):
         if len(a) == 19:
             for i in range(100):
                 nuevo = a[:len(a)-2] + "{:02d}".format(i) #por el /n
-                if nuevo not in list: 
+                if (nuevo not in list) and (nuevo not in lista): 
                     lista.append(nuevo)
     return lista
 
@@ -18,7 +18,7 @@ def get_apuntador():
 
 def get_codigo():
 	apuntador = get_apuntador()
-	return linecache.getline('generados.txt', apuntador)
+	return linecache.getline('generados2.txt', apuntador)
 
 def siguiente():
 	apuntador = get_apuntador()
